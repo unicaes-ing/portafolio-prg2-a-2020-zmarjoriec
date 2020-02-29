@@ -68,7 +68,7 @@ namespace Practica_2
             txtCantidad.Text = "";
             txtDescuento.Text = "";
             txtPrecio.Text = "";
-            txtTotal.Text = "":
+            txtTotal.Text = "";
         }
     }
 }
