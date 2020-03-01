@@ -42,5 +42,23 @@ namespace Practica_3
 			}
 			dgvTabla.ClearSelection();
 		}
-    }
+
+		private void btnBuscar_Click(object sender, EventArgs e)
+		{
+            int num = Convert.ToInt32(txtNumeroBu.Text);
+
+            for (int f = 0; f < 10; f++)
+            {
+                for (int c = 0; c < 10; c++)
+                {
+                    string valor;
+                    valor = dgvTabla.Rows[f].Cells[c].Value.ToString();
+                    if (num == Convert.ToInt32(valor))
+                    {
+                        dgvTabla.Rows[f].Cells[c].Style.BackColor = Color.Yellow;
+                    }
+                }
+            }
+        }
+	}
 }
