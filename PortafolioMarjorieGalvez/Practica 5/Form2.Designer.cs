@@ -49,7 +49,7 @@
             this.dgvA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvA.Location = new System.Drawing.Point(12, 42);
             this.dgvA.Name = "dgvA";
-            this.dgvA.Size = new System.Drawing.Size(206, 139);
+            this.dgvA.Size = new System.Drawing.Size(206, 124);
             this.dgvA.TabIndex = 0;
             // 
             // dgvB
@@ -57,7 +57,7 @@
             this.dgvB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvB.Location = new System.Drawing.Point(234, 42);
             this.dgvB.Name = "dgvB";
-            this.dgvB.Size = new System.Drawing.Size(216, 139);
+            this.dgvB.Size = new System.Drawing.Size(216, 124);
             this.dgvB.TabIndex = 1;
             // 
             // dgvC
@@ -65,7 +65,7 @@
             this.dgvC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvC.Location = new System.Drawing.Point(475, 42);
             this.dgvC.Name = "dgvC";
-            this.dgvC.Size = new System.Drawing.Size(220, 139);
+            this.dgvC.Size = new System.Drawing.Size(255, 124);
             this.dgvC.TabIndex = 2;
             // 
             // lblA
@@ -103,6 +103,7 @@
             this.btnCalcular.TabIndex = 6;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // rdoMultiplicar
             // 
@@ -125,6 +126,7 @@
             this.rdoSumar.TabStop = true;
             this.rdoSumar.Text = "Sumar";
             this.rdoSumar.UseVisualStyleBackColor = true;
+            this.rdoSumar.CheckedChanged += new System.EventHandler(this.rdoSumar_CheckedChanged);
             // 
             // grp
             // 
@@ -141,7 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 333);
+            this.ClientSize = new System.Drawing.Size(780, 333);
             this.Controls.Add(this.grp);
             this.Controls.Add(this.lblC);
             this.Controls.Add(this.lblB);
@@ -151,6 +153,7 @@
             this.Controls.Add(this.dgvA);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvC)).EndInit();
