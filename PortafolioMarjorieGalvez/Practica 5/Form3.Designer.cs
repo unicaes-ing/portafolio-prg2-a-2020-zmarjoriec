@@ -33,6 +33,7 @@
             this.lstSucursales = new System.Windows.Forms.ListBox();
             this.lstVentas = new System.Windows.Forms.ListBox();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.lblMTotal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblSucursales
@@ -61,6 +62,7 @@
             this.lstSucursales.Name = "lstSucursales";
             this.lstSucursales.Size = new System.Drawing.Size(118, 160);
             this.lstSucursales.TabIndex = 2;
+            this.lstSucursales.SelectedIndexChanged += new System.EventHandler(this.lstSucursales_SelectedIndexChanged);
             // 
             // lstVentas
             // 
@@ -73,17 +75,26 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(250, 307);
+            this.lblTotal.Location = new System.Drawing.Point(210, 309);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(84, 13);
             this.lblTotal.TabIndex = 4;
             this.lblTotal.Text = "Total de ventas:";
+            // 
+            // lblMTotal
+            // 
+            this.lblMTotal.AutoSize = true;
+            this.lblMTotal.Location = new System.Drawing.Point(311, 309);
+            this.lblMTotal.Name = "lblMTotal";
+            this.lblMTotal.Size = new System.Drawing.Size(0, 13);
+            this.lblMTotal.TabIndex = 5;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 388);
+            this.Controls.Add(this.lblMTotal);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.lstVentas);
             this.Controls.Add(this.lstSucursales);
@@ -91,6 +102,7 @@
             this.Controls.Add(this.lblSucursales);
             this.Name = "Form3";
             this.Text = "Form3";
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,5 +115,6 @@
         private System.Windows.Forms.ListBox lstSucursales;
         private System.Windows.Forms.ListBox lstVentas;
         private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblMTotal;
     }
 }
