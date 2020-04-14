@@ -130,6 +130,7 @@
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(100, 20);
             this.txtNom.TabIndex = 8;
+            this.txtNom.TextChanged += new System.EventHandler(this.txtNom_TextChanged);
             // 
             // cboPropietario
             // 
@@ -144,6 +145,16 @@
             // 
             this.cboEspecie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEspecie.FormattingEnabled = true;
+            this.cboEspecie.Items.AddRange(new object[] {
+            "Perro",
+            "Gato",
+            "Hamster",
+            "Loro",
+            "Perico",
+            "Pez",
+            "Tortuga",
+            "Serpiente",
+            "Iguana"});
             this.cboEspecie.Location = new System.Drawing.Point(150, 103);
             this.cboEspecie.Name = "cboEspecie";
             this.cboEspecie.Size = new System.Drawing.Size(121, 21);
@@ -164,6 +175,7 @@
             this.mskCodigo.Name = "mskCodigo";
             this.mskCodigo.Size = new System.Drawing.Size(100, 20);
             this.mskCodigo.TabIndex = 12;
+            this.mskCodigo.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskCodigo_MaskInputRejected);
             // 
             // txtPeso
             // 
@@ -171,6 +183,7 @@
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(100, 20);
             this.txtPeso.TabIndex = 13;
+            this.txtPeso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPeso_KeyPress);
             // 
             // rdoHembra
             // 
@@ -273,6 +286,7 @@
             this.btnSalir.TabIndex = 18;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // err
             // 
@@ -303,6 +317,7 @@
             this.Controls.Add(this.lblCodigo);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.err)).EndInit();
             this.ResumeLayout(false);
