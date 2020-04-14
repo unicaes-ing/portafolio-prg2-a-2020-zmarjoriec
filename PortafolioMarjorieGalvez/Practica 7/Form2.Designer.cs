@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblPropietario = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.rdoMacho = new System.Windows.Forms.RadioButton();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Propietario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +53,10 @@
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.err = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.err)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -130,6 +133,7 @@
             // 
             // cboPropietario
             // 
+            this.cboPropietario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPropietario.FormattingEnabled = true;
             this.cboPropietario.Location = new System.Drawing.Point(150, 70);
             this.cboPropietario.Name = "cboPropietario";
@@ -138,6 +142,7 @@
             // 
             // cboEspecie
             // 
+            this.cboEspecie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEspecie.FormattingEnabled = true;
             this.cboEspecie.Location = new System.Drawing.Point(150, 103);
             this.cboEspecie.Name = "cboEspecie";
@@ -146,9 +151,10 @@
             // 
             // dtpNaci
             // 
+            this.dtpNaci.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNaci.Location = new System.Drawing.Point(150, 141);
             this.dtpNaci.Name = "dtpNaci";
-            this.dtpNaci.Size = new System.Drawing.Size(200, 20);
+            this.dtpNaci.Size = new System.Drawing.Size(100, 20);
             this.dtpNaci.TabIndex = 11;
             // 
             // mskCodigo
@@ -196,6 +202,7 @@
             this.btnGuardar.TabIndex = 16;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // dataGridView1
             // 
@@ -215,15 +222,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(715, 150);
             this.dataGridView1.TabIndex = 17;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(662, 415);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 18;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // codigo
             // 
@@ -267,6 +265,19 @@
             this.Sexo.Name = "Sexo";
             this.Sexo.ReadOnly = true;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(662, 415);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 18;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            // 
+            // err
+            // 
+            this.err.ContainerControl = this;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,6 +304,7 @@
             this.Name = "Form2";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.err)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,5 +337,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Peso;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sexo;
+        private System.Windows.Forms.ErrorProvider err;
     }
 }
